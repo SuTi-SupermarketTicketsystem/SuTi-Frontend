@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {icon, LatLng, latLng, Layer, marker, tileLayer} from 'leaflet';
 import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-maps',
@@ -16,7 +17,7 @@ export class MapsComponent implements OnInit {
   mapsView = false;
   supermarket = [
     {
-      name: 'Aldi',
+      marketName: 'Aldi',
       position:
         {
           lat: 49.0108342,
@@ -61,25 +62,18 @@ export class MapsComponent implements OnInit {
     this.markers.push(newMarker);
   }
 
-  constructor() {
+  constructor(private snackBar: MatSnackBar) {
   }
 
   ngOnInit(): void {
     this.addAldiMarker();
+  }
 
-    this.selectedLocation = {
-      marktName: 'Aldi',
-      position:
-        {
-          lat: 49.0108342,
-          long: 8.3983163
-        },
-      address: {
-        street: 'KaiserStr.',
-        code: '76131',
-        city: 'Karlsruhe'
-      }
-    };
+  closeBooking(event) {
+    this.selectedLocation = null;
+    this.snackBar.open('Ticket is booked', '', {
+      duration: 3000
+    });
   }
 
   selectLocation(location: any) {

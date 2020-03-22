@@ -21,7 +21,7 @@
       <tbody>
       <tr *ngFor="let markt of supermarket; let i = index">
         <th scope="row">{{i + 1}}</th>
-        <td>{{markt.marktName}}</td>
+        <td>{{markt.marketName}}</td>
         <td>{{markt.address.street}}, {{markt.address.code}} {{markt.address.city}}</td>
         <td>
           <i class="fas fa-chevron-right"></i>
@@ -33,6 +33,8 @@
   </ng-template>
 
   <div *ngIf="selectedLocation">
-    <app-booking [location]="selectedLocation"></app-booking>
+    <div class="booking">
+      <app-booking [location]="selectedLocation" (close)="closeBooking($event)"></app-booking>
+    </div>
   </div>
 </div>

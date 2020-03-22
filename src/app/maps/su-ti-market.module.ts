@@ -16,6 +16,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatNativeDateModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

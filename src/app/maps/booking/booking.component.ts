@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-booking',
@@ -7,9 +7,16 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class BookingComponent implements OnInit {
   @Input() location: any;
+
+  @Output() close: any = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  closeModal() {
+    this.close.emit(true);
   }
 
 }

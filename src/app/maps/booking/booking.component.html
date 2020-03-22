@@ -18,13 +18,13 @@
       </div>
       <div class="row">
         <div class="col-12">
-          {{location.marktName}}
+          {{location.marketName}}
         </div>
       </div>
     </mat-card-content>
     <mat-card-actions>
       <div class="d-flex  justify-content-end">
-        <button mat-button>Ticket buchen</button>
+        <button mat-button (click)="closeModal()">Ticket buchen</button>
       </div>
     </mat-card-actions>
   </mat-card>
