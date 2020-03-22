@@ -1,31 +1,33 @@
-<div>
-  <form>
-<!--    User Name-->
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text pr-3"><fa-icon [icon]="faUser"></fa-icon></span></div>
-      <input type="text" placeholder="Benutzername"/>
-    </div>
-
-
-<!--    Password-->
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text"><fa-icon [icon]="faLockOpen"></fa-icon></span></div>
-      <input type="password" placeholder="Passwort"/>
-    </div>
-
-    <a href="">Passwort vergessen?</a>
-    <br>
-<!--    Submit-->
-    <button type="submit" class="btn btn-primary mt-2"  [routerLink]="'/maps'">Login</button>
-
-  </form>
-
-  <br>
-<!--  Register-->
+<div class="d-flex justify-content-center">
   <div>
+    <form>
+      <!--    User Name-->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text pr-3"><fa-icon [icon]="faUser"></fa-icon></span></div>
+        <input class="pl-1" type="text" placeholder="Benutzername"/>
+      </div>
+
+
+      <!--    Password-->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><fa-icon [icon]="faLockOpen"></fa-icon></span></div>
+        <input class="pl-1" type="password" placeholder="Passwort"/>
+      </div>
+
+      <a href="" class="">Passwort vergessen?</a>
+      <br>
+      <!--    Submit-->
+      <button type="submit" class="btn btn-primary mt-2"  [routerLink]="'/maps'">Login</button>
+
+    </form>
+
+    <br>
+    <!--  Register-->
     Noch nicht angeleldet?
     <a href="">Registrieren</a>
   </div>
+
+
 </div>
