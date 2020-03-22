@@ -13,31 +13,10 @@ export class LoginComponent implements OnInit {
   faUser = faUser;
   faLockOpen = faLockOpen;
 
-  constructor(private dialog: MatDialog) {
+  constructor() {
   }
 
   ngOnInit(): void {
   }
-
-  openDialog() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.autoFocus = true;
-    dialogConfig.data = {
-      market: 'Aldi Süd',
-      address: {
-        street: 'Kaiserstrasse 1337',
-        zipCode: '76131',
-        city: 'Karlsruhe'
-      },
-      timeslot: {
-        start: '17:00',
-        end: '17:30'
-      }
-    };
-
-
-    this.dialog.open(TicketComponent, dialogConfig);
-  }
-
 
 }
