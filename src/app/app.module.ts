@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {LoginModule} from './login/login.module';
+import { RegisterModule } from './register/register.module';
 import {TicketModule} from './ticket/ticket.module';
 import {MapsModule} from './maps/maps.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     LoginModule,
+    RegisterModule,
     TicketModule,
     MapsModule,
     AppRoutingModule,
