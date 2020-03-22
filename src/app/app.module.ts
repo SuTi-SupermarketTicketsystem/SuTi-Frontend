@@ -9,10 +9,12 @@ import {MapsModule} from './maps/maps.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToolbarComponentComponent } from './toolbar-component/toolbar-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToolbarComponentComponent
   ],
   imports: [
     BrowserModule,
