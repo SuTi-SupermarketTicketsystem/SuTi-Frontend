@@ -1,1 +1,38 @@
-<p>maps works!</p>
+<div class="content">
+  <app-basic-info></app-basic-info>
+  <div class="maps_view" *ngIf="mapsView; else TABLEVIEW">
+    <div leaflet style="height: 300px;"
+         [leafletOptions]="options"
+         [leafletLayers]="markers"
+    >
+    </div>
+  </div>
+  <ng-template #TABLEVIEW>
+    <h3>Supermärkte in der nähe</h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Adresse</th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let markt of supermarket; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{markt.marktName}}</td>
+        <td>{{markt.address.street}}, {{markt.address.code}} {{markt.address.city}}</td>
+        <td>
+          <i class="fas fa-chevron-right"></i>
+          <fa-icon [icon]="faChevronRight" (click)="selectLocation(markt)"></fa-icon>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </ng-template>
+
+  <div *ngIf="selectedLocation">
+    <app-booking [location]="selectedLocation"></app-booking>
+  </div>
+</div>
