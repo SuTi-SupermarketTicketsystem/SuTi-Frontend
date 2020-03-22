@@ -7,6 +7,8 @@ import {LoginModule} from './login/login.module';
 import {TicketModule} from './ticket/ticket.module';
 import {MapsModule} from './maps/maps.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     TicketModule,
     MapsModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
