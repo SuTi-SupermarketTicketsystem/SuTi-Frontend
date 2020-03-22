@@ -40,13 +40,6 @@ export class RegisterComponent implements OnInit {
 
   constructor() { }
 
-  public submit(): void {
-    console.log('- - - register - - -');
-    console.log(this.userNameValue);
-    console.log(this.emailValue);
-    console.log(this.pw1Value);
-  }
-
   ngOnInit(): void {
   }
 

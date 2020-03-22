@@ -45,7 +45,7 @@
       <!--    Submit-->
       <button type="submit"
               class="btn btn-primary mt-2"
-              (click)="submit()"
+              [routerLink]="'/login'"
               [disabled]="!isValid" >
         Account erstellen
       </button>
