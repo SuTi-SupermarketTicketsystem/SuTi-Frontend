@@ -1,5 +1,5 @@
 import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {NavigationStart, Router} from '@angular/router';
+import {NavigationEnd, NavigationStart, Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +8,16 @@ import {NavigationStart, Router} from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'SuTi';
-
+  login = true;
   constructor(private router: Router) {
   }
 
   ngOnInit(): void {
+    this.router.events.subscribe((value: NavigationEnd) => {
+      if (!document.URL.toString().includes('/login')) {
+        this.login = false;
+      }
+    });
   }
 
 }
