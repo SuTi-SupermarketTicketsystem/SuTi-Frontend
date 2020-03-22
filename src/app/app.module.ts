@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {LoginModule} from './login/login.module';
 import {TicketModule} from './ticket/ticket.module';
 import {MapsModule} from './maps/maps.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {MapsModule} from './maps/maps.module';
     LoginModule,
     TicketModule,
     MapsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
