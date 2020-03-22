@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div>
+    <h1 class="text-light">Account erstellen</h1>
+    <img width="210px" src="/assets/svg/logo_with_text.svg" alt="SUTI">
+    <form class="m-2">
+      <!--    User Name-->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text pr-3"><fa-icon [icon]="faUser"></fa-icon></span></div>
+        <input class="pl-1"
+               type="text"
+               placeholder="Benutzername"
+               (change)="userName = $event.target.value"/>
+      </div>
+
+      <!-- Email-->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><fa-icon [icon]="faMail"></fa-icon></span></div>
+        <input class="pl-1"
+               type="email"
+               placeholder="Email"
+               (change)="email = $event.target.value"/>
+      </div>
+
+      <!--    Password-->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><fa-icon [icon]="faLockOpen"></fa-icon></span></div>
+        <input class="pl-1"
+               type="password"
+               placeholder="Passwort"
+               (change)="pw1 = $event.target.value"/>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><fa-icon [icon]="faLockOpen"></fa-icon></span></div>
+        <input class="pl-1"
+               type="password"
+               placeholder="Passwort wiederholen"
+               (change)="pw2 = $event.target.value"/>
+
+      </div>
+      <small class="form-text text-light" [hidden]="pwEqual">Die angegebenen Passwörter<br>stimmen nicht miteinander überein!</small>
+      <br>
+      <!--    Submit-->
+      <button type="submit"
+              class="btn btn-primary mt-2"
+              [routerLink]="'/login'"
+              [disabled]="!isValid" >
+        Account erstellen
+      </button>
+
+    </form>
+  </div>
+
+
+</div>
