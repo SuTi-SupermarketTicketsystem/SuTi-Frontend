@@ -1,1 +1,21 @@
-<p>ticket works!</p>
+<div style="text-align:center">
+  <h1 mat-dialog-title>Your SuTi Ticket</h1>
+  <mat-dialog-content style="font-size:medium">
+    <h3>{{data.market}}</h3>
+    <p>
+      {{data.address.street}}<br>
+      <span class="postal-code">{{data.address.zipCode}} {{data.address.city}}</span>
+    </p>
+
+    <p style="font-weight: bold;">{{data.timeslot.start}} - {{data.timeslot.end}}</p>
+    <img style="max-width: 50%; max-height: 50%" src="/assets/img/qr-code.png" alt="Barcode">
+    <br>
+    <p style="font-size:small; font-style: italic;">
+      Bitte erscheinen Sie rechtzeitig und achten Sie darauf, dass Sie Ihren Einkauf innerhalb ihres Zeitslots beenden.
+      Falls Sie nicht rechtzeitig erscheinen, verfällt Ihr SuTi-Ticket.
+    </p>
+    <p style="font-weight: bold">
+      Bleiben Sie gesund! #WirVsVirus
+    </p>
+  </mat-dialog-content>
+</div>
